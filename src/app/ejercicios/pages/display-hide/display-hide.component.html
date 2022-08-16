@@ -1,0 +1,21 @@
+<div class="m-5 d-flex justify-content-center">
+    <h1>Hello World</h1>
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-center">
+    <button pButton type="button" label="{{mostrar ? 'Ocultar' : 'Mostrar'}}" class="btn btn-success mt-5"
+        (click)="cambiarEstado()">
+    </button>
+</div>
+
+<div class="mensaje">
+    <div class="m-5 d-flex justify-content-center">
+        <div *ngIf="mostrar">
+            <h1>
+                Hola Mundo 🌍
+            </h1>
+        </div>
+    </div>
+</div>

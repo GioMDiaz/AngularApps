@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "name": "Marta",
+      "password": "0000",
+      "passwordConfirm": "0000",
+      "email": "marta@marta.com",
+      "subscribed": false,
+      "country": "Spain",
+      "city": "Barcelona",
+      "id": 4
+    },
+    {
+      "name": "Paula",
+      "password": "0000",
+      "passwordConfirm": "0000",
+      "email": "paula@paula.com",
+      "subscribed": true,
+      "country": "Spain",
+      "city": "Barcelona",
+      "id": 6
+    },
+    {
+      "name": "Vero",
+      "password": "0000",
+      "passwordConfirm": "0000",
+      "email": "vero@vero.com",
+      "subscribed": true,
+      "country": "Colombia",
+      "city": "Bogota",
+      "id": 4
+    },
+    {
+      "name": "Natalia",
+      "password": "0000",
+      "passwordConfirm": "0000",
+      "email": "natalia@natalia.com",
+      "subscribed": true,
+      "country": "Francia",
+      "city": "Paris",
+      "id": 6
+    },
+    {
+      "name": "hola",
+      "password": "123456",
+      "email": "gio.gio@gmail.com",
+      "subscribed": true,
+      "country": "Albania",
+      "city": "sknckw",
+      "id": 7
+    },
+    {
+      "name": "yiyhhgui",
+      "password": "0000",
+      "passwordConfirm": "0000",
+      "email": "123456@mail.com",
+      "subscribed": null,
+      "country": "Algeria",
+      "city": "ergerge",
+      "id": 8
+    },
+    {
+      "name": "dfgergre",
+      "password": "0000",
+      "email": "marvelel@gmail.com",
+      "subscribed": true,
+      "country": "Albania",
+      "city": "dfvrgfer",
+      "id": 9
+    },
+    {
+      "name": "giovann",
+      "password": "1234",
+      "email": "1234566@mail.com",
+      "subscribed": false,
+      "country": "Albania",
+      "city": "albi",
+      "id": 10
+    },
+    {
+      "name": "dfsd",
+      "password": "0000",
+      "email": "relel@gmail.com",
+      "subscribed": false,
+      "country": "Algeria",
+      "city": "hikji",
+      "id": 11
+    },
+    {
+      "name": "edsrgrdgrd",
+      "password": "0000",
+      "email": "mael@gmail.com",
+      "subscribed": false,
+      "country": "Algeria",
+      "city": "fygjty",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<h1 class="titleParent">PARENT</h1>
+<div class="optionButtons">
+  <button class="button" mat-stroked-button (click)="setTextFromService()">Use Service</button>
+  <button class="button" mat-stroked-button (click)="setTextToChild()">Use Input Property</button>
+  <button class="button" mat-stroked-button (click)="setTextFromSubject()">Use Observable</button>
+</div>
+<p>
+  <strong>Message: {{ inputMsg }}</strong>
+</p>
+<div class="container">
+  <app-child
+    [message]="message"
+    (outputEvent)="getTextFromChild($event)"
+  ></app-child>
+</div>

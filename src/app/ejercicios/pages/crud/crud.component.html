@@ -1,1 +1,11 @@
-<p>crud works!</p>
+<div class="crud">
+  
+  <div class="form">
+    <app-form #form></app-form>
+  </div>
+
+  <div class="table">
+    <app-table (emitter)="form.editValue($event)"></app-table>
+  </div>
+
+</div>

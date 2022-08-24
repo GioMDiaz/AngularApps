@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-crud',
   templateUrl: './crud.component.html',
-  styleUrls: []
+  styleUrls: ['./crud.component.css'],
 })
 export class CrudComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

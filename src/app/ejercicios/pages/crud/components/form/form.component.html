@@ -1,0 +1,73 @@
+<form [formGroup]="myForm" (ngSubmit)="save()" class="form">
+
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Nombre de usuario</mat-label>
+      <input matInput placeholder="Ingrese su nombre" type="text" autocomplete="off" formControlName="name" />
+    </mat-form-field>
+    <mat-error *ngIf="validValue('name')">El nombre debe ser superior a dos letras</mat-error>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Contraseña</mat-label>
+      <input autocomplete="off" matInput type="password" formControlName="password" />
+      <mat-error *ngIf="validValue('password')">
+        Contraseña muy corta
+      </mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Confirmar contraseña</mat-label>
+      <input autocomplete="off" matInput type="password" formControlName="passwordConfirm" />
+      <mat-error *ngIf="validValue('passwordConfirm')">
+        Las contraseñas deben coincidir
+      </mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Correo</mat-label>
+      <input matInput placeholder="correo electronico" formControlName="email" [readonly]="readonlyControl" />
+      <mat-error *ngIf="validValue('email')">{{ emailErrorMsg }}</mat-error>
+    </mat-form-field>
+  </p>
+
+  <mat-checkbox formControlName="subscribed"> Recibir ofertas </mat-checkbox>
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Pais</mat-label>
+      <mat-select formControlName="country">
+        <mat-option *ngFor="let item of countries" [value]="item.name.common">{{
+          item.name.common
+          }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Ciudad</mat-label>
+      <input autocomplete="off" matInput formControlName="city" placeholder="Introduzca una ciudad" />
+      <mat-error *ngIf="validValue('city')">El nombre debe tener al menos 3 caracteres</mat-error>
+    </mat-form-field>
+  </p>
+  <button type="submit" mat-raised-button color="warn">Enviar</button>
+</form>
+<br />
+
+
+<!-- </div> 
+  <h5>Form errors</h5>
+  <pre>{{ myForm.errors | json }}</pre>
+  <h5>Name</h5>
+  <pre>{{ myForm.controls["name"].errors | json }}</pre>
+  <h5>Password</h5>
+  <pre>{{ myForm.controls["password"].errors | json }}</pre>
+  <h5>Confirmar</h5>
+  <pre>{{ myForm.controls["passwordConfirm"].errors | json }}</pre>
+  <h5>Email</h5>
+  <pre>{{ myForm.controls["email"].errors | json }}</pre> -->

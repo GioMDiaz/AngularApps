@@ -3,30 +3,42 @@ import { CommonModule } from '@angular/common';
 
 import { EjerciciosRoutingModule } from './ejercicios-routing.module';
 import { DisplayHideComponent } from './pages/display-hide/display-hide.component';
-import { ComunicationComponent } from './pages/comunication/comunication.component';
-import { CrudComponent } from './pages/crud/crud.component';
 import { SearchOnTypeComponent } from './pages/search-on-type/search-on-type.component';
 import { LightSwitchComponent } from './pages/light-switch/light-switch.component';
 import { ExternalDataComponent } from './pages/external-data/external-data.component';
 import { CounterComponent } from './pages/counter/counter.component';
 import { PrimeModule } from '../prime/prime.module';
-
+import { FormComponent } from './pages/crud/components/form/form.component';
+import { TableComponent } from './pages/crud/components/table/table.component';
+import { CrudComponent } from './pages/crud/crud.component';
+import { MaterialCrudModule } from './pages/crud/material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComunicationComponent } from './pages/comunication/comunication.component';
+import { ChildComponent } from './pages/comunication/components/child/child.component';
+import { ParentComponent } from './pages/comunication/components/parent/parent.component';
 
 @NgModule({
   declarations: [
     DisplayHideComponent,
-    ComunicationComponent,
-    CrudComponent,
     SearchOnTypeComponent,
     LightSwitchComponent,
     ExternalDataComponent,
-    CounterComponent
+    CounterComponent,
+    FormComponent,
+    TableComponent,
+    CrudComponent,
+    ComunicationComponent,
+    ChildComponent,
+    ParentComponent
   ],
+
   imports: [
     CommonModule,
     EjerciciosRoutingModule,
-    PrimeModule
-    
+    PrimeModule,
+    MaterialCrudModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class EjerciciosModule { }

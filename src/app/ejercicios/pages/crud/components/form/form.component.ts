@@ -33,11 +33,6 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
   
-    this.crudService.getCountries().subscribe((resp) => {
-      this.countries = resp.sort((a, b) =>
-        a.name.common > b.name.common ? 1 : -1
-      );
-    });
   }
 
   myForm: FormGroup = this.fb.group(

@@ -1,0 +1,23 @@
+<div class="containerView">
+
+    <div class="row mt-3">
+        <h3>Seleccione un País</h3>
+
+        <mat-form-field [formGroup]="myForm2" appearance="outline" color="accent">
+            <mat-label>Pais</mat-label>
+            <mat-select formControlName="countries">
+                <mat-option *ngFor="let item of countries" [value]="item.name.common">{{item.name.common}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col">
+            <app-buscador [pais]="paisActual"></app-buscador>
+        </div>
+
+    </div>
+
+</div>

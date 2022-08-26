@@ -12,7 +12,7 @@ export class ComunicationService {
   childSubject: Subject<string>;
 
   constructor() {
-    // iniciamos como events emitters y observables o subjects
+    // iniciamos como events emitters y observables / subjects
     this.parentText    = new EventEmitter<string>();
     this.childText     = new EventEmitter<string>();
     this.parentSubject = new Subject<string>();

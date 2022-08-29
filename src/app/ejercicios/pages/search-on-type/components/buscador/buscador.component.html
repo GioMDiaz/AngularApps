@@ -1,7 +1,6 @@
 <form [formGroup]="myForm" autocomplete="off">
-    <input formControlName="countryName" class="form-control mt-2" 
-    placeholder="Universidad..." value="termino" type="text" 
-    (input)="presionaTecla()">
+    <input formControlName="countryName" (input)="debounceTecla()" class="form-control mt-2" 
+    placeholder="Universidad..." value="termino" type="text">
 
     <ul class="list-group">
         <li *ngFor="let universidad of universidades" 

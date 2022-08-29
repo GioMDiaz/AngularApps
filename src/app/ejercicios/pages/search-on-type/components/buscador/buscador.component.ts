@@ -49,7 +49,7 @@ myForm: FormGroup = this.fb.group(
     }) 
   }
 
-  presionaTecla() {
+  debounceTecla() {
     this.debouncer.next(this.termino)
     this.sugerencias(this.termino)
   }

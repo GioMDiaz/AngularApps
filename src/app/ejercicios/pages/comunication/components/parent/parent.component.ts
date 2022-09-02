@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ComunicationService } from '../../services/communication.service';
 
 @Component({
@@ -10,19 +10,19 @@ export class ParentComponent implements OnInit {
   constructor(private comunicationService: ComunicationService) {}
 
   // Output
-  @Output() message: string = '';
+  message!: String;
 
   // Input
-  inputMsg = '';
+  inputMsg: string = '';
 
-  getTextFromChild($event: any) {
-    this.inputMsg = $event;
+  getTextFromChild(event: string) {
+    this.inputMsg = event;
 
   }
 
   // enviando mensaje al hijo usando (input)
   setTextToChild() {
-    this.message = 'PARENT USING INPUT PROPERTY';
+    this.message = new String ('PARENT USING INPUT PROPERTY');
   }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class ParentComponent implements OnInit {
 
     this.comunicationService
       .accessParentMessage()
-      .subscribe((msg) => (this.inputMsg = msg as string));
+      .subscribe((text) => (this.inputMsg = text as string));
   }
 
 

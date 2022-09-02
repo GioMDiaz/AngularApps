@@ -94,6 +94,15 @@
       "country": "Algeria",
       "city": "fygjty",
       "id": 12
+    },
+    {
+      "name": "jere",
+      "password": "0000",
+      "email": "jere@jere.com",
+      "subscribed": false,
+      "country": "Algeria",
+      "city": "fevrssdfv",
+      "id": 13
     }
   ]
 }

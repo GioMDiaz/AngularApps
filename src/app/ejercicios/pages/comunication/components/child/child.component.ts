@@ -8,11 +8,11 @@ import { ComunicationService } from '../../services/communication.service';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() message = '';
+  @Input() message!: String;
 
   @Output() outputEvent = new EventEmitter<string>();
 
-  constructor(private comunicationService: ComunicationService) { }
+  constructor(private comunicationService: ComunicationService) {}
 
   ngOnInit(): void {
 
@@ -26,7 +26,7 @@ export class ChildComponent implements OnInit {
   }
 
 
-  emitData() {
+  sentData() {
     this.outputEvent.emit('CHILD USING OUTPUT EVENT');
   }
 

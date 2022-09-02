@@ -1,6 +1,7 @@
 .container {
-  border: 5px solid rgb(36, 130, 135);
+  border: 5px solid rgb(87, 184, 189);
   padding: 50px;
+  border-radius: 2%;
 }
 
 p {

@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
     `
     .mensaje{
       border-radius: 5px;
-      color: grey;
+      background-color: rgb(18, 18, 39);
       background-color: #B2F877;
       margin-left: 20%;
       margin-right: 20%
@@ -18,6 +18,8 @@ import { Component} from '@angular/core';
 export class DisplayHideComponent {
 
   mostrar: boolean = false;
+
+  
   
   constructor() { }
 

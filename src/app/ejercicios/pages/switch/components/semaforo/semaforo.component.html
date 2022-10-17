@@ -1,0 +1,12 @@
+<h1>Switch lights</h1>
+<hr>
+
+<div class="semaforo">
+    <div class="lights">
+        <div class="circulo" [ngClass]="{'green': selectedColor === 'Verde'}"></div>
+        <div class="circulo" [ngClass]="{'orange': selectedColor === 'Naranja'}"></div>
+        <div class="circulo" [ngClass]="{'red': selectedColor === 'Rojo'}"></div>
+    </div>
+</div>
+
+<app-control class="control"></app-control>

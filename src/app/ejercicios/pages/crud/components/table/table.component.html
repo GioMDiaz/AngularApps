@@ -1,71 +1,59 @@
 <!-- https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=46&codigo=46&inicio=40 -->
 
-<div class="titulo">
-  <h1>Formulario de Registro de Usuarios:</h1>
+<div class="tablaNg">
+
+  <div class="titulo">
+    <h1>Formulario de Registro de Usuarios:</h1>
+  </div>
+  <p-table class="pTabla" [value]="dataSource" [rows]="5" [paginator]="true" [rowHover]="true" dataKey="id"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
+    <ng-template pTemplate="caption">
+      <div>
+        <h5 >Usuarios Registrados</h5>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name">Nombre <p-sortIcon>name</p-sortIcon>
+        </th>
+        <th pSortableColumn="Email">Email
+        </th>
+        <th pSortableColumn="Subscripcion">Subscripcion
+        </th>
+        <th pSortableColumn="País">País
+        </th>
+        <th pSortableColumn="Ciudad">Ciudad
+        </th>
+        <th pSortableColumn="Acciones">Acciones
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-users class="ngTemplate">
+      <tr>
+
+
+        <td>{{users.name}}</td>
+        <td>{{users.email}}</td>
+        <td class="icon">
+          <i class="pi pi-times" *ngIf="!users.subscribed"></i>
+          <i class="pi pi-check" *ngIf="users.subscribed"></i>
+        </td>
+        <td>{{users.country}}</td>
+        <td>{{users.city}}</td>
+
+
+        <td class='buttonsIcon'>
+          <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2"
+            (click)="sendId(users)"></button>
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"
+            (click)="deleteData(users.id)"></button>
+        </td>
+      </tr>
+    </ng-template>
+
+  </p-table>
+
+
+
 </div>
-
-
-<table mat-table [dataSource]="dataSource" class="table">
-
-
-  <!-- Name -->
-
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Nombre</th>
-    <td mat-cell *matCellDef="let element">{{ element.name | titlecase }}</td>
-  </ng-container>
-
-
-  <!-- Email -->
-
-  <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef>Email</th>
-    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
-  </ng-container>
-
-
-  <!-- Subscription -->
-
-  <ng-container matColumnDef="subscribed">
-    <th mat-header-cell *matHeaderCellDef>Subscripción</th>
-    <td mat-cell *matCellDef="let element">
-      <mat-icon *ngIf="element.subscribed">done</mat-icon>
-    </td>
-  </ng-container>
-
-
-  <!-- Country -->
-
-  <ng-container matColumnDef="country">
-    <th mat-header-cell *matHeaderCellDef>Pais</th>
-    <td mat-cell *matCellDef="let element">{{ element.country }}</td>
-  </ng-container>
-
-
-  <!-- City  -->
-
-  <ng-container matColumnDef="city">
-    <th mat-header-cell *matHeaderCellDef>Ciudad</th>
-    <td mat-cell *matCellDef="let element">
-      {{ element.city | titlecase }}
-    </td>
-  </ng-container>
-
-
-  <!-- Items Editar / Borrar  -->
-
-  <ng-container matColumnDef="actions">
-    <th mat-header-cell *matHeaderCellDef>Acciones</th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-icon-button color="basic" (click)="sendId(element)" #id>
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button color="warn" (click)="deleteData(element.id)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>

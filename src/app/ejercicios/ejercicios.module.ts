@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EjerciciosRoutingModule } from './ejercicios-routing.module';
 import { PrimeModule } from '../prime/prime.module';
-import { MaterialCrudModule } from './pages/crud/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
 
 import { DisplayHideComponent } from './pages/display-hide/display-hide.component';
 import { SearchOnTypeComponent } from './pages/search-on-type/search-on-type.component';
-import { LightSwitchComponent } from './pages/light-switch/light-switch.component';
 import { ExternalDataComponent } from './pages/external-data/external-data.component';
 import { CounterComponent } from './pages/counter/counter.component';
 import { FormComponent } from './pages/crud/components/form/form.component';
@@ -18,12 +17,16 @@ import { ChildComponent } from './pages/comunication/components/child/child.comp
 import { ParentComponent } from './pages/comunication/components/parent/parent.component';
 import { BuscadorComponent } from './pages/search-on-type/components/buscador/buscador.component';
 import { PaisComponent } from './pages/search-on-type/components/pais/pais.component';
+import { SwitchComponent } from './pages/switch/switch.component';
+import { SemaforoComponent } from './pages/switch/components/semaforo/semaforo.component';
+import { ControlComponent } from './pages/switch/components/control/control.component';
+
+
 
 @NgModule({
   declarations: [
     DisplayHideComponent,
     SearchOnTypeComponent,
-    LightSwitchComponent,
     ExternalDataComponent,
     CounterComponent,
     FormComponent,
@@ -33,16 +36,25 @@ import { PaisComponent } from './pages/search-on-type/components/pais/pais.compo
     ChildComponent,
     ParentComponent,
     PaisComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    SwitchComponent,
+    SemaforoComponent,
+    ControlComponent,
+   
   ],
 
   imports: [
     CommonModule,
     EjerciciosRoutingModule,
     PrimeModule,
-    MaterialCrudModule,
     ReactiveFormsModule,
     FormsModule,
-  ]
+    NgChartsModule,
+      ],
+
+      exports: [
+   
+      ]
+
 })
 export class EjerciciosModule { }

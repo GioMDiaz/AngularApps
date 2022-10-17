@@ -42,7 +42,7 @@ myForm: FormGroup = this.fb.group(
 
     this.debouncer
     .pipe(
-      debounceTime(300)
+      debounceTime(10)
     )
     .subscribe(valor=> {
       this.onDebounce.emit(valor);
@@ -63,6 +63,10 @@ myForm: FormGroup = this.fb.group(
     .subscribe(universidades=>{
       this.universidades=universidades;
     })
+  }
+
+  elegir(){
+    
   }
 
 

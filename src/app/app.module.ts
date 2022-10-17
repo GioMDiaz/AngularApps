@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PrimeModule } from './prime/prime.module';
+import { MenuComponent } from './ejercicios/pages/menu/menu.component';
 
 
 
@@ -13,7 +15,13 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent
 
+  ],
+
+  exports:[
+    HttpClientModule,
+    PrimeModule
   ],
   imports: [
     BrowserModule,
@@ -21,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule, 
     ReactiveFormsModule,
     HttpClientModule,
+    PrimeModule
     
   ],
   providers: [],

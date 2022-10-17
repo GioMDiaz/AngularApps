@@ -1,0 +1,26 @@
+<div class="control">
+
+    <h1>Control</h1>
+
+    <label class="title">Color</label>
+
+    <select class="selectControl" [(ngModel)]="colorAct" (click)="setColorFromSubject()" [disabled]="!selected">
+
+        <option *ngFor="let color of colors">
+            {{ color }}
+        </option>
+
+    </select>
+
+    <button class="autoButton" (click)='colorAuto()'>Auto</button>
+
+
+   
+   <p-selectButton [options]="stateOptions" optionLabel="label" optionValue="value" (click)="changeOptions()"></p-selectButton>
+    
+
+
+
+    
+</div>
+

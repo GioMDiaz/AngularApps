@@ -5,7 +5,7 @@ import { EjerciciosModule } from './ejercicios/ejercicios.module';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./ejercicios/ejercicios.module').then(m => m.EjerciciosModule)
+    loadChildren: () => import('./ejercicios/ejercicios.module').then(m => m.EjerciciosModule),
   }
 ];
 

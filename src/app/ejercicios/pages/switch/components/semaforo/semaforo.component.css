@@ -1,0 +1,77 @@
+
+.control{
+    display: flex;
+}
+    
+h1 {
+margin-top: 3%;
+    text-align: center;
+}
+
+hr {
+    margin-bottom: 5%;
+}
+
+.semaforo {
+margin-top: 20%;
+float:left;
+display: flex;
+flex-direction: column;
+width: 100px;
+margin: 0 250px;
+padding: 15px;
+list-style-type: none;
+border: 6px double grey;
+background: rgb(226, 213, 213);
+background: linear-gradient( -90deg, #45484d 0%, #000000 100%);
+border-radius: 20%;
+box-shadow: 0px 0px 0 20px rgba(0,0,0,.8);
+}
+
+.lights {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.circulo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #252626;
+    margin: 13px 0px ;
+    background-color: rgb(131, 131, 131);
+
+}
+
+.red {
+    background-color: red;
+    -webkit-box-shadow: 0px 0px 15px 14px #FF0000; 
+    box-shadow: 0px 0px 15px 14px red;
+    animation: fadeInAnimation ease 2s;
+}
+.orange {
+    background-color: orange;
+    -webkit-box-shadow: 0px 0px 15px 14px orange; 
+    box-shadow: 0px 0px 15px 14px orange;
+    animation: fadeInAnimation ease 2s;
+}
+.green {
+    background-color: green;
+    -webkit-box-shadow: 0px 0px 15px 14px green; 
+    box-shadow: 0px 0px 15px 14px green;
+    animation: fadeInAnimation ease 2s;
+}
+
+@keyframes fadeInAnimation {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}

@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
     private behaviorService: BehaviorService,
     private validatorService: ValidatorService,
     private emailValidator: EmailValidatorService
-  ) {}
+  ) { }
 
   countries: Country[] = [];
 
@@ -44,7 +44,7 @@ export class FormComponent implements OnInit {
       name: ['', [Validators.required, Validators.minLength(2)]],
       password: ['', [Validators.required, Validators.minLength(4)]],
       passwordConfirm: ['', [Validators.required]],
-      email: ['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)], [this.emailValidator]],
+      email: ['', [Validators.required, Validators.pattern(this.validatorService.emailPattern)], [this.emailValidator]],
       subscribed: [false, []],
       country: ['', [Validators.required]],
       city: ['', [Validators.required, Validators.minLength(2)]],
@@ -69,7 +69,7 @@ export class FormComponent implements OnInit {
         this.behaviorService.changeDataSub(data);
       });
       this.clearForm();
-      
+
     } else if (this.user) {
       const editValue = { ...this.myForm.value };
 
@@ -83,7 +83,7 @@ export class FormComponent implements OnInit {
   get emailErrorMsg() {
     const errors = this.myForm.get('email')?.errors;
     const email = this.myForm.get('email')?.value;
-    
+
 
     if (errors?.['required']) {
       return 'Este campo no puede estar vacio.';
@@ -96,6 +96,9 @@ export class FormComponent implements OnInit {
 
   clearForm() {
     this.myForm.reset();
+    this.myForm.markAsPristine();
+    this.myForm.markAsUntouched();
+    this.myForm.updateValueAndValidity();
     this.emailValidator.originalMail = null;
   }
   editValue(value: any) {

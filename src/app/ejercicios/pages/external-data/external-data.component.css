@@ -1,0 +1,14 @@
+.containerChart {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin-left: 10%;
+
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}

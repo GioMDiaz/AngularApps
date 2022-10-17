@@ -1,1 +1,24 @@
-<p>counter works!</p>
+<div class="col">
+
+    <div class="counter">
+        <h1> {{counter}} </h1>
+    </div>
+
+    <div class="labelCounter">
+        <label for="">Count</label>
+    </div>
+    <div class="buttonContainer">
+        <button class="counterButton" (click)="increase()"> + </button>
+        <input [(ngModel)]="valor" class="form form-control inputControl" type="number">
+        <button class="counterButton" (click)="diminish()"> - </button>
+    </div>
+
+    <div class="labelCounter">
+        <label for="">Setup</label>
+    </div>
+    <div class="optionsButtons">
+        <button class="autoButton" (click)="go()"> Start </button>
+        <button class="autoButton" (click)="stop()"> Stop </button>
+        <button class="autoButton" (click)="refresh()"> Refresh </button>
+    </div>
+</div>

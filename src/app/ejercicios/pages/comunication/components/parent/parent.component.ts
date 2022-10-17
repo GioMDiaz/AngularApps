@@ -22,7 +22,7 @@ export class ParentComponent implements OnInit {
 
   // enviando mensaje al hijo usando (input)
   setTextToChild() {
-    this.message = new String ('PARENT USING INPUT PROPERTY');
+    this.message = new String ('Parent using input property');
   }
 
   ngOnInit(): void {
@@ -40,11 +40,11 @@ export class ParentComponent implements OnInit {
 
 
   setTextFromService() {
-    this.comunicationService.raiseParentEvent('PARENT USING SERVICE');
+    this.comunicationService.raiseParentEvent('Parent using Service');
   }
 
 
   setTextFromSubject() {
-    this.comunicationService.sendChildMessage('PARENT USING SUBJECT');
+    this.comunicationService.sendChildMessage('Parent using Subject');
   }
 }

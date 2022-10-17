@@ -1,9 +1,16 @@
-<h1 class="titleChild">CHILD</h1>
+<div class="divChild">
+<h1 class="titleChild">Child</h1>
 <div class="optionButtons">
-  <button class="button" mat-stroked-button (click)="setTextFromService()">Use Service</button>
-  <button class="button" mat-stroked-button (click)="sentData()">Use Input Property</button>
-  <button class="button" mat-stroked-button (click)="setTextFromSubject()">Use Observable</button>
+  <button pButton pRipple type="button" label="Use Service" class="p-button-raised p-button-secondary"
+    (click)="setTextFromService()"></button>
+
+  <button pButton pRipple type="button" label="Use Input Property" class="p-button-raised p-button-secondary"
+    (click)="sentData()"></button>
+
+  <button pButton pRipple type="button" label="Use Observable" class="p-button-raised p-button-secondary"
+    (click)="setTextFromSubject()"></button>
 </div>
 <p>
   <strong>Message: {{ message }}</strong>
 </p>
+</div>

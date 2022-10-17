@@ -1,8 +1,24 @@
-.table{
-    background-color: rgb(39, 79, 79);
-    margin: 4%;
+.tablaNg{
+    margin: 5%;
+    max-width: 100%;
 }
 
 .titulo {
     align-items: center;
+    display: flex;
+    color: rgb(203, 204, 205); 
 }
+
+.buttonsIcons{
+    display: flex;
+    
+    margin: 5%;
+    align-items: center;
+    max-width: 50%;
+   
+}
+
+.ngTemplate{
+    max-width: 100%;
+}
+

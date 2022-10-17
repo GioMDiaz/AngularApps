@@ -2,8 +2,8 @@ import { BehaviorService } from '../../services/behavior.service';
 import { User } from './../../interfaces/user';
 import { CrudService } from './../../services/crud.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
 import { Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-table',
@@ -20,13 +20,13 @@ export class TableComponent implements OnInit {
     'actions',
   ];
 
-  dataSource!: MatTableDataSource<User>;
+  dataSource: User[] = [];
 
   @Output() emitter: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private crudService: CrudService,
-    private behaviorService: BehaviorService
+    private behaviorService: BehaviorService,
   ) {}
 
   ngOnInit(): void {
@@ -40,7 +40,7 @@ export class TableComponent implements OnInit {
   obtainData() {
     this.crudService.getUsers().subscribe({
       next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
+        this.dataSource = res;
       },
     });
   }
@@ -52,4 +52,5 @@ export class TableComponent implements OnInit {
   deleteData(id: string) {
     this.crudService.deleteUser(id).subscribe((data) => this.obtainData());
   }
+
 }

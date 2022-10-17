@@ -27,16 +27,16 @@ export class ChildComponent implements OnInit {
 
 
   sentData() {
-    this.outputEvent.emit('CHILD USING OUTPUT EVENT');
+    this.outputEvent.emit('Child using output event');
   }
 
 
   setTextFromService() {
-    this.comunicationService.raiseChildText('CHILD USING SERVICE');
+    this.comunicationService.raiseChildText('Child using Service');
   }
 
 
   setTextFromSubject() {
-    this.comunicationService.sendParentMessage('CHILD USING SUBJECT');
+    this.comunicationService.sendParentMessage('Child using Subject');
   }
 }

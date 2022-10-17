@@ -1,6 +1,23 @@
 .form{
-    background-color: rgb(39, 79, 79);
-    margin: 15px;
-    padding: 3%;
-    width: 95%;
+    margin-top: 20%;
+    background-color: rgb(32, 18, 60);
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field{
+
+    margin-top: 5%;
+    max-width: 100%;  
+}
+
+.fieldCheck{
+    margin: 5%;
+}
+
+.p-button-rounded{
+    margin-top: 10%;
+    align-items: center;
+    background-color: rgb(51, 34, 86);
 }

@@ -1,12 +1,11 @@
-<form [formGroup]="myForm" autocomplete="off">
+<form [formGroup]="myForm" autocomplete="off" class="containerView">
     <input formControlName="countryName" (input)="debounceTecla()" class="form-control mt-2" 
     placeholder="Universidad..." value="termino" type="text">
 
     <ul class="list-group">
         <li *ngFor="let universidad of universidades" 
-        class="list-group-item">
+        class="list-group-item" click="elegir()">
             {{universidad.name}}
         </li>
     </ul>
-
 </form>
